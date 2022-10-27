@@ -26,7 +26,7 @@ const Posts = ({nickname, children}) => {
 
     let customFetch = async (opt) => {
         try{
-          let list = await fetch("http://localhost:3000/api/posts",opt)
+          let list = await fetch("https://main-app-logger-git-main-eddarv.vercel.app/api/posts",opt)
           let json= await list.json()
           console.log(json)
 
