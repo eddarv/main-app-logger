@@ -86,7 +86,7 @@ export default function Home() {
 
   let customFetch = async () => {
     try{
-      let val = await fetch("http://localhost:3000/api",options)
+      let val = await fetch("https://main-app-logger-git-main-eddarv.vercel.app/api",options)
       let json= await val.json()
       console.log("si", json)
       setValidation({
