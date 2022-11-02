@@ -117,7 +117,7 @@ const Posts = ({nickname, children}) => {
                     <button onClick={handleClose2} className={styles.button3}>x</button>
                     <input type="text" placeholder="New Todo" onChange={handleChange} name="title" value={form.title} className={styles.text2}/>
                     <textarea placeholder="What are you thinking?" onChange={handleChange} name="content" value={form.content} required className={styles.text3}></textarea>
-                    <input type="submit" required className={`${styles.button} ${!isReady ? styles.disabled : ""}`}/>
+                    <input type="submit" required className={`${!isReady ? styles.disabled : styles.button}`}/>
                 </form>
             </section>
                    
