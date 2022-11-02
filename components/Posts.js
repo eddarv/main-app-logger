@@ -67,8 +67,8 @@ const Posts = ({nickname, children}) => {
 
     const createNewPost = (e) => {
         e.preventDefault()
-        setShowWindow(false)
         if(!form.title||!form.content) return
+        setShowWindow(false)
         customFetch(optionsPost)
         setForm(initialForm)
     }
