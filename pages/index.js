@@ -88,7 +88,7 @@ export default function Home() {
     try{
       let val = await fetch("https://main-app-logger-git-main-eddarv.vercel.app/api",options)
       let json= await val.json()
-      console.log("si", json)
+      // console.log("si", json)
       setValidation({
         validation: json.validation,
         nickname: json.nickname,

@@ -8,7 +8,7 @@ const initialForm={title:"",content:""}
 const Posts = ({nickname, children}) => {
     const [postsList, setPostsLists] = useState([]);
     const [showWindow, setShowWindow] = useState(false);
-    const [isReady, setIsReady] = useState("");
+    const [isReady, setIsReady] = useState(false);
     const [form, setForm] = useState(initialForm);
     const [id, setId] = useState({id:-1, change:true});
 
@@ -56,8 +56,8 @@ const Posts = ({nickname, children}) => {
     }
 
     useEffect(()=>{
-        if(form.title.length===0||form.content.length===0) return setIsReady("disabled")
-        setIsReady("")
+        if(form.title.length===0||form.content.length===0) return setIsReady(false)
+        setIsReady(true)
     },[form])
 
     useEffect(()=>{
@@ -117,7 +117,7 @@ const Posts = ({nickname, children}) => {
                     <button onClick={handleClose2} className={styles.button3}>x</button>
                     <input type="text" placeholder="New Todo" onChange={handleChange} name="title" value={form.title} className={styles.text2}/>
                     <textarea placeholder="What are you thinking?" onChange={handleChange} name="content" value={form.content} required className={styles.text3}></textarea>
-                    <input type="submit" className={isReady} required className={styles.button}/>
+                    <input type="submit" required className={`${styles.button} ${!isReady ? styles.disabled : ""}`}/>
                 </form>
             </section>
                    

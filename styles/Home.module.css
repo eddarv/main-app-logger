@@ -7,6 +7,10 @@
     background-color: #EEE;
 }
 
+.disabled{
+    background-color: rgba(238, 238, 238, 0.726);
+}
+
 .main{
     display: flex;
     flex-direction: column;
