@@ -8,7 +8,14 @@
 }
 
 .disabled{
-    background-color: rgba(238, 238, 238, 0.726);
+    border-radius: 10px 10px;
+    height: 40px;
+    width: 120px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: auto;
+    background-color: rgb(190, 190, 190);
+    color: rgb(122, 122, 122);
 }
 
 .main{
