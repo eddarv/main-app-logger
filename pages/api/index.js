@@ -4,6 +4,10 @@ let users=[{nickname:"", password:""}]
 export default async function handler(req, res) {
   try{
 
+    if(req.method==='GET') {
+      res.status(200).json({saludo: "hola"})
+    }
+
     if(req.method==='POST') {
 
       // console.log(req.body)
